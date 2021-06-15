@@ -1,0 +1,17 @@
+<div {{ $props.serializeOnly(['class']) }} id="{{ `select-${id}` }}">
+  <div class="select__container">
+    <div class="select__wrapper">
+    <label for="{{ id }}" class="select__label">{{ label }}</label>
+      <select class="select__select" id="{{ id }}">
+        @each(item in list)
+          <option value="{{ item.value }}">{{ item.key }}</option>
+        @end
+      <select>
+    </div>
+    <div class="select__arrow">
+      <span class="material-icons">
+        expand_more
+      </span>
+    </div>
+  </div>
+</div>

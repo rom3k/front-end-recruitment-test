@@ -1,0 +1,6 @@
+<button type="{{ type }}" class="button{{ classes ? " " + classes.join(" ") : "" }}{{ icon ?  " button--icon" : "" }}">
+  @if(icon) 
+    {{{ await $slots.icon() }}}
+  @end
+  <span>{{ value }}</span>
+</button>

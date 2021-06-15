@@ -1,0 +1,11 @@
+<div {{ $props.serializeOnly(['class']) }} id="{{`input-${id}`}}">
+  <div class="input__container">
+    <div class="input__{{ type }}">
+      <label class="input__label" for="{{ id }}">{{ label }}</label>
+      <input type="{{ type }}" id="{{ id }}" {{ $props.serializeExcept(['class', 'id', 'type', 'inputIcon', 'label']) }} />
+    </div>
+    @if(inputIcon)
+    {{{ await $slots.inputIcon() }}}
+    @endif
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.col-6 {
+  flex-basis: 50%;
+}
+
+.divider {
+  margin: 1rem 0 0.75rem 0;
+  border: 1px dashed #dfdfdf;
+}
+
+.error-message {
+  color: red;
+  font-size: calc(1rem - 20px);
+}

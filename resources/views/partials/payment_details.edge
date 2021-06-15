@@ -1,0 +1,47 @@
+<div class="payment-details__header header">
+  @component('components/counter_chip', {
+    number: 2,
+    text: 'Payment details',
+    icon: true
+  })
+    @slot('icon')
+      <span class="material-icons">lock</span>
+    @end
+  @end
+</div>
+<div class="payment-details__fields">
+  <div class="row">
+    @component('components/input', {
+      id: 'creditCard',
+      label: 'Credit Card Number',
+      class: 'input input__full',
+      type: 'text',
+      inputIcon: true
+    })
+      @slot('inputIcon')
+        <img class="visa-icon" src="{{ asset('assets/images/visa.svg') }}" alt="Visa Icon">
+      @end
+    @end
+  </div>
+  <div class="row">
+    @component('components/input', {
+      id: 'CVV',
+      label: 'Security Code',
+      class: 'input input__half',
+      inputIcon: true,
+      type: 'password',
+      maxlength: 3
+    })
+      @slot('inputIcon')
+        <span class="questionmark">?</span>
+      @end
+    @end
+    @!component('components/input', {
+      id: 'expDate',
+      label: 'Expiration Date',
+      class: 'input input__half',
+      type: 'text'
+    })
+
+  </div>
+</div>

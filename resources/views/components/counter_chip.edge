@@ -1,0 +1,9 @@
+<div class="counter-chip">
+  <span class="counter-chip__number">{{ number }}</span>
+  <p class="counter-chip__text">{{ text }}</p>
+  @if(icon)
+    <span class="counter-chip__icon-wrapper">
+      {{{ await $slots.icon() }}}
+    </span>
+  @end
+</div>

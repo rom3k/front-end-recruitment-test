@@ -31,7 +31,7 @@ a {
 main {
   max-width: 620px;
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 30px;
   align-items: center;
   display: flex;
@@ -73,4 +73,12 @@ main li:before {
 main code {
   font-size: 16px;
   background: #e6e2ff;
+}
+
+img {
+  width: 100%;
+}
+
+main section {
+  height: 100%;
 }

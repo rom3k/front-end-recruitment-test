@@ -1,0 +1,36 @@
+.counter-chip {
+  display: flex;
+  flex-flow: row nowrap;
+  text-transform: uppercase;
+  align-items: center;
+
+  &__text {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  &__number {
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  &__icon-wrapper {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    > * {
+      font-size: 0.75rem;
+    }
+  }
+}

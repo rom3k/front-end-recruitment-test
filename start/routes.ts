@@ -42,9 +42,35 @@ Route.get('/checkout', async ({ view }) => {
         grandToal: 960,
       },
     },
+    countryList: [
+      {
+        key: '',
+        value: '',
+      },
+      {
+        key: 'United States',
+        value: 'us',
+      },
+      {
+        key: 'Great Britain',
+        value: 'gb',
+      },
+      {
+        key: 'Germany',
+        value: 'de',
+      },
+      {
+        key: 'France',
+        value: 'fr',
+      },
+      {
+        key: 'Poland',
+        value: 'pl',
+      },
+    ],
   }
 
-  return view.render('index', state)
+  return view.render('checkout', state)
 })
 
 Route.post('/order', async ({ request, response }) => {
@@ -73,7 +99,7 @@ Route.post('/order', async ({ request, response }) => {
     response.send({
       message: 'Order successfully placed.',
     })
-  } catch(error) {
-    response.badRequest(error.messages)
+  } catch (error) {
+    response.badRequest({ message: 'There was problem with placing order.'})
   }
 })

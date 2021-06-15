@@ -1,0 +1,33 @@
+@layout('layouts/checkout_index')
+@set('title', 'Checkout')
+
+@section('body')
+  <div id="app" class="app">
+      <main>
+        <form name="checkout" id="checkout" novalidate> 
+          <div class="app__container">
+            @include('partials/personal_info')
+            @include('partials/payment_details')
+            @include('partials/basket')
+            <div class="confirm-button">
+              @component('components/button', {
+                type: 'submit',
+                value: 'Complete purchase',
+                classes: ['button--green'],
+                icon: true
+              })
+                @slot('icon')
+                  <span class="material-icons">shopping_cart</span>
+                @end
+              @end
+            </div>
+          </div>
+        </form>
+      </main>
+      @!component('components/snackbar', {
+        class: 'snackbar',
+        id: 'checkoutSnackbar',
+      })
+    </form>
+  </div>
+@end

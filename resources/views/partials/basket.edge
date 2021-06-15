@@ -1,0 +1,35 @@
+<div class="basket">
+  <div class="basket__container">
+    <div class="basket__header">
+      <p>Your Order</p>
+    </div>
+    <div class="basket__order">
+      <div class="basket__items">
+        @each(item in cart.items)
+          <div class="item">
+            <span class="item__name">{{ item.name }}</span>
+            <span class="item__price">{{ `$ ${item.price}` }}</span>
+          </div>
+        @end
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="basket__tax">
+      <div class="total-purchases">
+        <span>Total purchases</span>
+        <span>{{ `$ ${cart.totals.suoTotal}` }} </span>
+      </div>
+      <div class="estimated-tax">
+        <span>Estimated Tax</span>
+        <span>{{ `$ ${cart.totals.tax}` }}</span>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="basket__total">
+      <div class="total">
+        <span class="total__label">Total</span>
+        <span class="total__value">{{`$ ${cart.totals.grandToal}`}}</span>
+      </div>
+    </div>
+  </div>
+</div>

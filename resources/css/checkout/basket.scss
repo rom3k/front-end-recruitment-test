@@ -1,0 +1,58 @@
+.basket {
+  grid-column: 4 / 5;
+  grid-row: 2;
+  padding: 0.25rem;
+  height: calc(100% - 1.5rem);
+
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+
+  &__container {
+    height: 100%;
+    border: 2px dashed #dfdfdf;
+    border-radius: 0.3rem;
+    padding: 0.75rem;
+  }
+
+  &__header {
+    margin-bottom: 0.75rem;
+    > p {
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  &__items,
+  &__tax,
+  &__total {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .item:not(:last-of-type),
+  .total-purchases {
+    margin-bottom: 0.5rem;
+  }
+
+  .item,
+  .total,
+  .estimated-tax,
+  .total-purchases {
+    font-size: 0.65rem;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  .total {
+    &__label {
+      font-weight: bold;
+    }
+    &__value {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+}

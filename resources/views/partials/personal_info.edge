@@ -1,0 +1,52 @@
+<div class="personal-info__header header">
+  @!component('components/counter_chip', {
+    number: 1,
+    text: 'Personal information'
+  })
+</div>
+<div class="personal-info__fields">
+  <div class="row">
+    @!component('components/input', {
+      id: 'firstName',
+      label: 'First name',
+      class: 'input input__half',
+      type: 'text'
+    })
+    @!component('components/input', {
+      id: 'lastName',
+      label: 'Last name',
+      class: 'input input__half',
+      type: 'text'
+    })
+  </div>
+  <div class="row">
+    @!component('components/input', {
+      id: 'email',
+      label: 'Email',
+      class: 'input input__full',
+      type: 'text'
+    })
+  </div>
+  <div class="row">
+    @!component('components/input', {
+      id: 'postalCode',
+      label: 'Postal Code',
+      class: 'input input__half',
+      type: 'text'
+    })
+    @!component('components/select', {
+      id: 'country',
+      label: 'Country',
+      class: 'select select__half',
+      list: countryList
+    })
+  </div>
+  <div class="row">
+    @!component('components/input', {
+      id: 'phone',
+      label: 'Phone Number',
+      class: 'input input__full',
+      type: 'tel'
+    })
+  </div>
+</div>  
